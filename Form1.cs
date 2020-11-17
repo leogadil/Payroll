@@ -213,7 +213,7 @@ namespace PayrollApp
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start()
+            Process.Start("https://github.com/leogadil/Payroll");
         }
     }
 }
