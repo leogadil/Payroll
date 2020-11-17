@@ -200,7 +200,7 @@
             this.linkLabel3.Margin = new System.Windows.Forms.Padding(5);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(43, 15);
-            this.linkLabel3.TabIndex = 13;
+            this.linkLabel3.TabIndex = 5;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Github";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
@@ -213,7 +213,7 @@
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(5);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(56, 15);
-            this.linkLabel2.TabIndex = 12;
+            this.linkLabel2.TabIndex = 4;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "About Us";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
@@ -226,7 +226,7 @@
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(5);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(55, 15);
-            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Get Help";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -310,7 +310,7 @@
             this.PayrollButton.Margin = new System.Windows.Forms.Padding(100);
             this.PayrollButton.Name = "PayrollButton";
             this.PayrollButton.Size = new System.Drawing.Size(171, 102);
-            this.PayrollButton.TabIndex = 3;
+            this.PayrollButton.TabIndex = 2;
             this.PayrollButton.Text = "Payroll";
             this.PayrollButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.PayrollButton.UseVisualStyleBackColor = false;
@@ -398,6 +398,7 @@
             this.searchbar.Name = "searchbar";
             this.searchbar.Size = new System.Drawing.Size(168, 20);
             this.searchbar.TabIndex = 15;
+            this.searchbar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchbar_KeyPress);
             // 
             // button4
             // 
@@ -481,7 +482,7 @@
             this.viewerlove.Location = new System.Drawing.Point(145, 148);
             this.viewerlove.Name = "viewerlove";
             this.viewerlove.Size = new System.Drawing.Size(65, 17);
-            this.viewerlove.TabIndex = 32;
+            this.viewerlove.TabIndex = 23;
             this.viewerlove.Text = "Pag-Ibig";
             this.viewerlove.UseVisualStyleBackColor = true;
             // 
@@ -491,7 +492,7 @@
             this.viewerphil.Location = new System.Drawing.Point(64, 148);
             this.viewerphil.Name = "viewerphil";
             this.viewerphil.Size = new System.Drawing.Size(74, 17);
-            this.viewerphil.TabIndex = 31;
+            this.viewerphil.TabIndex = 22;
             this.viewerphil.Text = "PhilHealth";
             this.viewerphil.UseVisualStyleBackColor = true;
             // 
@@ -500,7 +501,7 @@
             this.viewersalary.Location = new System.Drawing.Point(118, 123);
             this.viewersalary.Name = "viewersalary";
             this.viewersalary.Size = new System.Drawing.Size(103, 20);
-            this.viewersalary.TabIndex = 39;
+            this.viewersalary.TabIndex = 20;
             this.viewersalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.viewersalary_KeyPress);
             // 
             // viewersss
@@ -509,7 +510,7 @@
             this.viewersss.Location = new System.Drawing.Point(9, 148);
             this.viewersss.Name = "viewersss";
             this.viewersss.Size = new System.Drawing.Size(47, 17);
-            this.viewersss.TabIndex = 30;
+            this.viewersss.TabIndex = 21;
             this.viewersss.Text = "SSS";
             this.viewersss.UseVisualStyleBackColor = true;
             // 
@@ -528,7 +529,7 @@
             this.button6.Location = new System.Drawing.Point(8, 171);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(102, 23);
-            this.button6.TabIndex = 33;
+            this.button6.TabIndex = 24;
             this.button6.Text = "Delete";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -538,7 +539,7 @@
             this.viewerposition.Location = new System.Drawing.Point(74, 97);
             this.viewerposition.Name = "viewerposition";
             this.viewerposition.Size = new System.Drawing.Size(147, 20);
-            this.viewerposition.TabIndex = 37;
+            this.viewerposition.TabIndex = 19;
             // 
             // button5
             // 
@@ -557,7 +558,7 @@
             this.viewerid.Location = new System.Drawing.Point(74, 19);
             this.viewerid.Name = "viewerid";
             this.viewerid.Size = new System.Drawing.Size(147, 20);
-            this.viewerid.TabIndex = 31;
+            this.viewerid.TabIndex = 16;
             this.viewerid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.viewerid_KeyPress);
             // 
             // label22
@@ -574,7 +575,7 @@
             this.viewerfirstname.Location = new System.Drawing.Point(74, 45);
             this.viewerfirstname.Name = "viewerfirstname";
             this.viewerfirstname.Size = new System.Drawing.Size(147, 20);
-            this.viewerfirstname.TabIndex = 33;
+            this.viewerfirstname.TabIndex = 17;
             // 
             // label23
             // 
@@ -599,7 +600,7 @@
             this.viewerlastname.Location = new System.Drawing.Point(74, 71);
             this.viewerlastname.Name = "viewerlastname";
             this.viewerlastname.Size = new System.Drawing.Size(147, 20);
-            this.viewerlastname.TabIndex = 35;
+            this.viewerlastname.TabIndex = 18;
             // 
             // label24
             // 
@@ -639,7 +640,7 @@
             this.pagibig_checbox.Location = new System.Drawing.Point(156, 149);
             this.pagibig_checbox.Name = "pagibig_checbox";
             this.pagibig_checbox.Size = new System.Drawing.Size(65, 17);
-            this.pagibig_checbox.TabIndex = 29;
+            this.pagibig_checbox.TabIndex = 13;
             this.pagibig_checbox.Text = "Pag-Ibig";
             this.pagibig_checbox.UseVisualStyleBackColor = true;
             // 
@@ -649,7 +650,7 @@
             this.philhealth_checkbox.Location = new System.Drawing.Point(75, 149);
             this.philhealth_checkbox.Name = "philhealth_checkbox";
             this.philhealth_checkbox.Size = new System.Drawing.Size(74, 17);
-            this.philhealth_checkbox.TabIndex = 28;
+            this.philhealth_checkbox.TabIndex = 12;
             this.philhealth_checkbox.Text = "PhilHealth";
             this.philhealth_checkbox.UseVisualStyleBackColor = true;
             // 
@@ -659,7 +660,7 @@
             this.sss_checkbox.Location = new System.Drawing.Point(20, 149);
             this.sss_checkbox.Name = "sss_checkbox";
             this.sss_checkbox.Size = new System.Drawing.Size(47, 17);
-            this.sss_checkbox.TabIndex = 27;
+            this.sss_checkbox.TabIndex = 11;
             this.sss_checkbox.Text = "SSS";
             this.sss_checkbox.UseVisualStyleBackColor = true;
             // 
@@ -668,7 +669,7 @@
             this.basesalary_textbox.Location = new System.Drawing.Point(119, 123);
             this.basesalary_textbox.Name = "basesalary_textbox";
             this.basesalary_textbox.Size = new System.Drawing.Size(103, 20);
-            this.basesalary_textbox.TabIndex = 26;
+            this.basesalary_textbox.TabIndex = 10;
             this.basesalary_textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.basesalary_textbox_KeyPress);
             // 
             // label15
@@ -686,7 +687,7 @@
             this.SubmitButton.Location = new System.Drawing.Point(6, 172);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(216, 23);
-            this.SubmitButton.TabIndex = 24;
+            this.SubmitButton.TabIndex = 14;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -696,14 +697,14 @@
             this.position_textbox.Location = new System.Drawing.Point(75, 97);
             this.position_textbox.Name = "position_textbox";
             this.position_textbox.Size = new System.Drawing.Size(147, 20);
-            this.position_textbox.TabIndex = 23;
+            this.position_textbox.TabIndex = 9;
             // 
             // id_textbox
             // 
             this.id_textbox.Location = new System.Drawing.Point(75, 19);
             this.id_textbox.Name = "id_textbox";
             this.id_textbox.Size = new System.Drawing.Size(147, 20);
-            this.id_textbox.TabIndex = 17;
+            this.id_textbox.TabIndex = 6;
             this.id_textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_textbox_KeyPress);
             // 
             // label14
@@ -729,7 +730,7 @@
             this.lastnam_textbox.Location = new System.Drawing.Point(75, 71);
             this.lastnam_textbox.Name = "lastnam_textbox";
             this.lastnam_textbox.Size = new System.Drawing.Size(147, 20);
-            this.lastnam_textbox.TabIndex = 21;
+            this.lastnam_textbox.TabIndex = 8;
             // 
             // label12
             // 
@@ -754,7 +755,7 @@
             this.firstname_textbox.Location = new System.Drawing.Point(75, 45);
             this.firstname_textbox.Name = "firstname_textbox";
             this.firstname_textbox.Size = new System.Drawing.Size(147, 20);
-            this.firstname_textbox.TabIndex = 19;
+            this.firstname_textbox.TabIndex = 7;
             // 
             // label10
             // 

@@ -215,5 +215,14 @@ namespace PayrollApp
         {
             Process.Start("https://github.com/leogadil/Payroll");
         }
+
+        private void searchbar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button4.PerformClick();
+                e.Handled = true;
+            }
+        }
     }
 }
