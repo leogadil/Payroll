@@ -54,8 +54,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableManager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,7 +85,64 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\90711814_2829624377085821_412247238996131840_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42608171_10213633175771765_7737516293938479104_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75485188_3088393634510145_2614620942701166592_o %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1607067_894370630579104_202489120722354221_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facebook-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_452000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\164645-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_4520001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facebook-logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1607067_894370630579104_202489120722354221_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75485188_3088393634510145_2614620942701166592_o %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75485188_3088393634510145_2614620942701166592_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42608171_10213633175771765_7737516293938479104_o1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90711814_2829624377085821_412247238996131840_o1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\497184-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,5 +13,17 @@ namespace PayrollApp
         {
             MessageBox.Show(error, "Payroool", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public bool askagain(string error)
+        {
+            DialogResult dia = MessageBox.Show(error, "Payroool", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+            if(dia == DialogResult.Yes)
+            {
+                return true;
+            } else
+            {
+                return true;
+            }
+        }
     }
 }

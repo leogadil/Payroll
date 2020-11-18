@@ -13,13 +13,26 @@ namespace PayrollApp
 {
     public partial class Form1 : Form
     {
+        private int currentid = 0;
+
         EmployeeManager Emanager = new EmployeeManager();
+        PayrollManager Pmanager = new PayrollManager();
         ErrorHandling ErrHandling = new ErrorHandling();
 
         public Form1()
         {
             InitializeComponent();
             Emanager.importCSV(statusText);
+            Pmanager.importCSV(statusText);
+            dataGridView1.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#6cb4c4");
+            dataGridView2.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#6cb4c4");
+            linkLabel1.LinkColor = ColorTranslator.FromHtml("#6cb4c4");
+            linkLabel2.LinkColor = ColorTranslator.FromHtml("#6cb4c4");
+            linkLabel3.LinkColor = ColorTranslator.FromHtml("#6cb4c4");
+            button7.FlatAppearance.BorderColor = Color.WhiteSmoke;
+            button8.FlatAppearance.BorderColor = Color.WhiteSmoke;
+            button9.FlatAppearance.BorderColor = Color.WhiteSmoke;
+            button10.FlatAppearance.BorderColor = Color.WhiteSmoke;
         }
 
         private void EmployeeButton_Click(object sender, EventArgs e)
@@ -71,31 +84,12 @@ namespace PayrollApp
                 ErrHandling.report(err.Message);
             }
 
-            Emanager.updateTable(dataGridView1);
-        }
-
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            UpdaterBox.Enabled = true;
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                string id = row.Cells[0].Value.ToString();
-                Employee EmployeeData = Emanager.findEmployee(id);
-
-                viewerid.Text = EmployeeData.id.ToString();
-                viewerfirstname.Text = EmployeeData.firstname;
-                viewerlastname.Text = EmployeeData.lastname;
-                viewerposition.Text = EmployeeData.position;
-                viewersalary.Text = EmployeeData.baserate.ToString();
-                viewersss.Checked = EmployeeData.haveSSS;
-                viewerphil.Checked = EmployeeData.havePhilHealth;
-                viewerlove.Checked = EmployeeData.havePagIbig;
-            }
+            Emanager.update(dataGridView1);
         }
 
         private void groupBox2_Leave(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
+            //dataGridView1.ClearSelection();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -103,7 +97,7 @@ namespace PayrollApp
             if (!string.IsNullOrWhiteSpace(viewerid.Text))
             {
                 Emanager.destroyEmployee(viewerid.Text);
-                Emanager.updateTable(dataGridView1);
+                Emanager.update(dataGridView1);
 
                 viewerid.Clear();
                 viewerfirstname.Clear();
@@ -145,7 +139,7 @@ namespace PayrollApp
                 ErrHandling.report(err.Message);
             }
 
-            Emanager.updateTable(dataGridView1);
+            Emanager.update(dataGridView1);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -155,14 +149,17 @@ namespace PayrollApp
             int rowIndex = -1;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                for (int i = 0; i < dataGridView1.ColumnCount-1; i++)
+                if (row.Cells[0].Value != null)
                 {
-                    if (row.Cells[i].Value.ToString().Equals(searchbar.Text))
+                    for (int i = 0; i < dataGridView1.ColumnCount - 1; i++)
                     {
-                        rowIndex = row.Index;
-                        dataGridView1.Rows[rowIndex].Selected = true;
-                        searchint.Text = "Found it";
-                        break;
+                        if (row.Cells[i].Value.ToString() != null && row.Cells[i].Value.ToString().ToLower().Equals(searchbar.Text))
+                        {
+                            rowIndex = row.Index;
+                            dataGridView1.Rows[rowIndex].Selected = true;
+                            searchint.Text = "Found it";
+                            break;
+                        }
                     }
                 }
             }
@@ -173,15 +170,19 @@ namespace PayrollApp
             if (TabControl.SelectedIndex <= 0)
             {
                 Emanager.importCSV(statusText);
-            } else
-            {
-                Emanager.updateTable(dataGridView1);
             }
+            if(TabControl.SelectedIndex == 2)
+            {
+                Emanager.importCSV(statusText);
+            }
+
+            Emanager.update(dataGridView1);
+            Pmanager.update(dataGridView2);
         }
 
         private void id_textbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -197,7 +198,7 @@ namespace PayrollApp
 
         private void viewerid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -223,6 +224,261 @@ namespace PayrollApp
                 button4.PerformClick();
                 e.Handled = true;
             }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            viewerfirstname.Enabled = false;
+            viewerlastname.Enabled = false;
+            viewerposition.Enabled = false;
+            viewersalary.Enabled = false;
+            viewersss.Enabled = false;
+            viewerphil.Enabled = false;
+            viewerlove.Enabled = false;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    string id = row.Cells[0].Value.ToString();
+                    Employee EmployeeData = Emanager.findEmployee(id);
+                    viewerid.Text = EmployeeData.id.ToString();
+                    viewerfirstname.Text = EmployeeData.firstname;
+                    viewerlastname.Text = EmployeeData.lastname;
+                    viewerposition.Text = EmployeeData.position;
+                    viewersalary.Text = EmployeeData.baserate.ToString();
+                    viewersss.Checked = EmployeeData.haveSSS;
+                    viewerphil.Checked = EmployeeData.havePhilHealth;
+                    viewerlove.Checked = EmployeeData.havePagIbig;
+
+                    viewerfirstname.Enabled = true;
+                    viewerlastname.Enabled = true;
+                    viewerposition.Enabled = true;
+                    viewersalary.Enabled = true;
+                    viewersss.Enabled = true;
+                    viewerphil.Enabled = true;
+                    viewerlove.Enabled = true;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button1.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label39.Text = "No Result";
+            dataGridView2.ClearSelection();
+            int rowIndex = -1;
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if(row.Cells[0].Value != null)
+                {
+                    Console.WriteLine(row.Cells);
+                    for (int i = 0; i < dataGridView2.ColumnCount - 1; i++)
+                    {
+                        if (row.Cells[i].Value.ToString() != null && row.Cells[i].Value.ToString().ToLower().Equals(textBox1.Text))
+                        {
+                            rowIndex = row.Index;
+                            dataGridView2.Rows[rowIndex].Selected = true;
+                            label39.Text = "Found it";
+                            break;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            textBox2.Enabled = false;
+            textBox4.Enabled = false;
+            textBox7.Enabled = false;
+            button2.Enabled = false;
+            groupBox9.Enabled = false;
+            if (dataGridView2.SelectedRows.Count == 1)
+            {
+                foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+                {
+                    string id = row.Cells[0].Value.ToString();
+                    currentid = Convert.ToInt32(id);
+                    Employee EmployeeData = Pmanager.findEmployee(id);
+                    salary_position.Text = EmployeeData.position;
+                    salary_baserate.Text = EmployeeData.baserate.ToString();
+                    textBox2.Text = EmployeeData.baserate.ToString();
+                    salary_sss.Checked = EmployeeData.haveSSS;
+                    salary_phil.Checked = EmployeeData.havePhilHealth;
+                    salary_love.Checked = EmployeeData.havePagIbig;
+                    textBox2.Enabled = true;
+                    button2.Enabled = true;
+                    groupBox9.Enabled = true;
+                    textBox4.Enabled = true;
+                    textBox7.Enabled = true;
+                }
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            Pmanager.updateTotalDaysWorked(dateTimePicker1, dateTimePicker2, Convert.ToInt32(textBox7.Text), label37);
+            label37.Visible = true;
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            Pmanager.updateTotalDaysWorked(dateTimePicker1, dateTimePicker2, Convert.ToInt32(textBox7.Text), label37);
+            label37.Visible = true;
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                textBox2.Text = "0";
+            }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox4.Text))
+            {
+                textBox4.Text = "0";
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox7.Text))
+            {
+                textBox7.Text = "0";
+            }
+            Pmanager.updateTotalDaysWorked(dateTimePicker1, dateTimePicker2, Convert.ToInt32(textBox7.Text), label37);
+        }
+
+        private void basesalary_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(basesalary_textbox.Text))
+            {
+                basesalary_textbox.Text = "0";
+            }
+        }
+
+        private void id_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(id_textbox.Text))
+            {
+                id_textbox.Text = "0";
+            }
+        }
+
+        private void viewersalary_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(viewersalary.Text))
+            {
+                viewersalary.Text = "0";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double deduction_percentage = 0;
+            if(salary_sss.Checked)
+            {
+                deduction_percentage += 11.00;
+            } else if (salary_phil.Checked)
+            {
+                deduction_percentage += 2.75;
+            } else if (salary_love.Checked)
+            {
+                deduction_percentage += 2.00;
+            } 
+
+            Pmanager.computePayday( currentid,
+                Convert.ToInt32(salary_baserate.Text),
+                Convert.ToInt32(textBox2.Text),
+                Convert.ToInt32(textBox4.Text),
+                deduction_percentage,
+                label32,
+                label36,
+                label38,
+                button3);
+
+            label32.Visible = true;
+            label36.Visible = true;
+            label37.Visible = true;
+            label38.Visible = true;
+        }
+
+        private void RefreshEmployee_Click(object sender, EventArgs e)
+        {
+            Emanager.update(dataGridView1);
+        }
+
+        private void RefreshPayroll_Click(object sender, EventArgs e)
+        {
+            Pmanager.update(dataGridView2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Pmanager.savePayday(button3);
+            Pmanager.update(dataGridView2);
+            label32.Visible = true;
+            label36.Visible = true;
+            label37.Visible = true;
+            label38.Visible = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/dreiijeii");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/themightyguyoftheworld/");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/alexiskyleolympia");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/mawkwayandesibnida");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            EmployeeButton.PerformClick();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            PayrollButton.PerformClick();
         }
     }
 }

@@ -14,18 +14,19 @@ namespace PayrollApp
     class EmployeeManager : ErrorHandling
     {
 
-        private string fileName = "employeelist.csv";
-
+        string path = Path.Combine(Environment.GetFolderPath(
+        Environment.SpecialFolder.MyDoc‌​uments), "PayRoool");
         Dictionary<long, Employee> EmployeeList = new Dictionary<long, Employee>();
+
         public void importCSV(Label status)
         {
-            if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\" + fileName))
+            if (File.Exists(Path.Combine(path, "employeelist.csv")))
             {
                 status.Text = "Employee List found";
-                status.ForeColor = Color.YellowGreen;
+                status.ForeColor = Color.WhiteSmoke;
                 status.Visible = true;
 
-                using (StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + @"\" + fileName))
+                using (StreamReader sr = new StreamReader(Path.Combine(path,"employeelist.csv")))
                 {
                     EmployeeList.Clear();
                     string headerLine = sr.ReadLine();
@@ -34,7 +35,7 @@ namespace PayrollApp
                     while ((currentLine = sr.ReadLine()) != null)
                     {
                         string[] dataSplit = currentLine.Split(',');
-                        if(dataSplit.Length >= 0)
+                        if (dataSplit.Length >= 0)
                         {
                             EmployeeList.Add(Convert.ToInt64(dataSplit[0]), new Employee() {
                                 id = Convert.ToInt64(dataSplit[0]),
@@ -44,9 +45,9 @@ namespace PayrollApp
                                 baserate = Convert.ToInt64(dataSplit[4]),
                                 haveSSS = Convert.ToBoolean(dataSplit[5]),
                                 havePhilHealth = Convert.ToBoolean(dataSplit[6]),
-                                havePagIbig = Convert.ToBoolean(dataSplit[7])});
+                                havePagIbig = Convert.ToBoolean(dataSplit[7]) });
                         }
-                        
+
                     }
                 }
 
@@ -56,8 +57,6 @@ namespace PayrollApp
                 status.ForeColor = Color.Firebrick;
                 status.Visible = true;
             }
-            
-            
         }
 
         private void exportCSV()
@@ -66,18 +65,26 @@ namespace PayrollApp
 
             String csv = String.Join(
                 Environment.NewLine,
-               $"id,firstname,lastname,position,baserate,haveSSS,havePhilHealth,havePagIbig"
+               $"id,firstname,lastname,position,baserate,haveSSS,havePhilHealth,havePagIbig,totalsalary"
             );
 
             sb.Append(csv + Environment.NewLine);
 
             String csv2 = String.Join(
                 Environment.NewLine,
-                EmployeeList.Select(d => $"{d.Key},{d.Value.firstname},{d.Value.lastname},{d.Value.position},{d.Value.baserate},{d.Value.haveSSS},{d.Value.havePhilHealth},{d.Value.havePagIbig}")
+                EmployeeList.Select(d => $"{d.Key},{d.Value.firstname},{d.Value.lastname},{d.Value.position},{d.Value.baserate},{d.Value.haveSSS},{d.Value.havePhilHealth},{d.Value.havePagIbig},{d.Value.totalsalary}")
             );
             sb.Append(csv2);
 
-            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + fileName, sb.ToString());
+            bool exist = Directory.Exists(path);
+
+            if (!exist)
+                Directory.CreateDirectory(path);
+
+            FileInfo emlist = new FileInfo(Path.Combine(path, "employeelist.csv"));
+            StreamWriter namewriter = emlist.CreateText();
+            namewriter.Write(sb.ToString());
+            namewriter.Close();
         }
 
         public Employee findEmployee(string key)
@@ -91,41 +98,15 @@ namespace PayrollApp
             exportCSV();
         }
 
-        public void updateTable(DataGridView table)
+        public void update(DataGridView table)
         {
-
-            DataTable datatable = new DataTable();
-            datatable.Columns.Add("ID", typeof(long));
-            datatable.Columns.Add("First Name", typeof(string));
-            datatable.Columns.Add("Last Name", typeof(string));
-            datatable.Columns.Add("Position", typeof(string));
-            datatable.Columns.Add("Pay/Day", typeof(long));
-            datatable.Columns.Add("SSS", typeof(bool));
-            datatable.Columns.Add("PhilHealth", typeof(bool));
-            datatable.Columns.Add("Pag-Ibig", typeof(bool));
-
-            foreach (KeyValuePair<long, Employee> employee in EmployeeList)
-            {
-                var index = employee.Value;
-                DataRow datarow = datatable.NewRow();
-                datarow["ID"] = employee.Key;
-                datarow["First Name"] = index.firstname;
-                datarow["Last Name"] = index.lastname;
-                datarow["Position"] = index.position;
-                datarow["Pay/Day"] = index.baserate;
-                datarow["SSS"] = index.haveSSS;
-                datarow["PhilHealth"] = index.havePhilHealth;
-                datarow["Pag-Ibig"] = index.havePagIbig;
-                datatable.Rows.Add(datarow);
-            };
-
-            table.DataSource = datatable;
-            table.CurrentCell = null;
+            TableManager tm = new TableManager();
+            tm.updateTable(table, EmployeeList);
         }
 
         public void createEmployee(
             long ID, string FirstName, string LastName, string Position,
-            double BaseSalary, bool HaveSSS, bool HavePhilHealth, bool HavePagIbig )
+            double BaseSalary, bool HaveSSS, bool HavePhilHealth, bool HavePagIbig, double TotalSalary = 0 )
         {
             if (!EmployeeList.ContainsKey(ID)) {
                 EmployeeList.Add(ID, new Employee() { 
@@ -136,7 +117,8 @@ namespace PayrollApp
                     baserate = BaseSalary,
                     haveSSS = HaveSSS,
                     havePhilHealth = HavePhilHealth,
-                    havePagIbig = HavePagIbig });
+                    havePagIbig = HavePagIbig,
+                    totalsalary = TotalSalary});
             } else {
                 report("Id has a duplicate on the table.");
             }
@@ -179,5 +161,7 @@ namespace PayrollApp
         public bool havePhilHealth { get; set; }
         public bool havePagIbig { get; set; }
         public double totalsalary { get; set; }
+        public int totalovertime { get; set; }
+        public int totalleave { get; set; }
     }
 }
