@@ -31,6 +31,7 @@ namespace PayrollApp
 
         public void importCSV(Label status = null)
         {
+            EmployeeList.Clear();
             if (File.Exists(Path.Combine(path, "employeelist.csv")))
             {
                 if(status != null)

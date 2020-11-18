@@ -133,44 +133,17 @@
   <data name="Facebook-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Facebook-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1607067_894370630579104_202489120722354221_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1607067_894370630579104_202489120722354221_n1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="42608171_10213633175771765_7737516293938479104_o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\42608171_10213633175771765_7737516293938479104_o1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="164645-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\164645-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="90711814_2829624377085821_412247238996131840_o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\90711814_2829624377085821_412247238996131840_o1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Facebook-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Facebook-logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="75485188_3088393634510145_2614620942701166592_o (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75485188_3088393634510145_2614620942701166592_o (1)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="42608171_10213633175771765_7737516293938479104_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\42608171_10213633175771765_7737516293938479104_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="75485188_3088393634510145_2614620942701166592_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75485188_3088393634510145_2614620942701166592_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1607067_894370630579104_202489120722354221_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1607067_894370630579104_202489120722354221_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="90711814_2829624377085821_412247238996131840_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\90711814_2829624377085821_412247238996131840_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="75485188_3088393634510145_2614620942701166592_o (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75485188_3088393634510145_2614620942701166592_o (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="497184-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\497184-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

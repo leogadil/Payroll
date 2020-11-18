@@ -12,8 +12,6 @@ namespace PayrollApp
     {
         public void updateTable(DataGridView table, Dictionary<long, Employee> EmployeeList, bool payroll = false)
         {
-            table.AutoResizeColumns();
-            table.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataTable datatable = new DataTable();
             datatable.Columns.Add("ID", typeof(long));
             datatable.Columns.Add("First Name", typeof(string));
@@ -49,6 +47,8 @@ namespace PayrollApp
 
             table.DataSource = datatable;
             table.CurrentCell = null;
+            table.AutoResizeColumns();
+            table.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

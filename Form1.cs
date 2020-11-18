@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace PayrollApp
     public partial class Form1 : Form
     {
         private int currentid = 0;
+
+        public static Random RandomGen = new Random();
+        int clickPercentage = 90;
 
         EmployeeManager Emanager = new EmployeeManager();
         PayrollManager Pmanager = new PayrollManager();
@@ -167,6 +171,21 @@ namespace PayrollApp
 
         private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            if(TabControl.SelectedIndex == 3)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    int randomValueBetween0And99 = RandomGen.Next(100);
+                    if (randomValueBetween0And99 < clickPercentage)
+                    {
+                        label34.Text = "OH, I'M SORRY, DO YOU NEED ANYTHING? WE HAVE NOTHING HERE FOR YOU." + Environment.NewLine +  "SHU SHU";
+                    } else
+                    {
+                        label34.Text = "OH, I'M SORRY, DO YOU NEED ANYTHING? WE HAVE NOTHING HERE FOR YOU." + Environment.NewLine + "SHITZU";
+                    }
+                }
+            }
             if (TabControl.SelectedIndex <= 0)
             {
                 Emanager.importCSV(statusText);
@@ -479,6 +498,25 @@ namespace PayrollApp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             PayrollButton.PerformClick();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hey, You found me!. Have fun with Life!", "Payroool", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string path = System.IO.Path.Combine(Environment.GetFolderPath(
+                Environment.SpecialFolder.MyDoc‌​uments), "PayRoool");
+            DialogResult dr = MessageBox.Show("Do you want to delete 'Employee List'. There is no going back.", "Payroool", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == DialogResult.Yes)
+            {
+                if(Directory.Exists(path))
+                    Directory.Delete(path, true);
+                Emanager.importCSV(statusText);
+                Pmanager.importCSV(statusText);
+            }
         }
     }
 }

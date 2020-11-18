@@ -1,0 +1,2 @@
+id,firstname,lastname,position,baserate,haveSSS,havePhilHealth,havePagIbig,totalsalary
+0,Marc Ryan,Valle,manager,100,False,True,True,778

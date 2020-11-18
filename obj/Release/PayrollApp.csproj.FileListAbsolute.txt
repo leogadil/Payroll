@@ -1,0 +1,10 @@
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\bin\Release\PayrollApp.exe.config
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\bin\Release\PayrollApp.exe
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\bin\Release\PayrollApp.pdb
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.csprojAssemblyReference.cache
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.Form1.resources
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.Properties.Resources.resources
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.csproj.GenerateResource.cache
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.csproj.CoreCompileInputs.cache
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.exe
+C:\Users\leoga\source\repos\PayrollApp\PayrollApp\obj\Release\PayrollApp.pdb

@@ -20,6 +20,7 @@ namespace PayrollApp
 
         public void importCSV(Label status)
         {
+            EmployeeList.Clear();
             if (File.Exists(Path.Combine(path, "employeelist.csv")))
             {
                 status.Text = "Employee List found";

@@ -30,6 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.statusText = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PayrollButton = new System.Windows.Forms.Button();
+            this.EmployeeButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.RefreshEmployee = new System.Windows.Forms.Button();
             this.searchint = new System.Windows.Forms.Label();
@@ -72,6 +92,9 @@
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.RefreshPayroll = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -110,31 +133,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.statusText = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PayrollButton = new System.Windows.Forms.Button();
-            this.EmployeeButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
@@ -146,9 +148,12 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,17 +169,13 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl
@@ -186,11 +187,276 @@
             this.TabControl.Controls.Add(this.tabPage4);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 0);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(0);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(760, 527);
             this.TabControl.TabIndex = 0;
             this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackgroundImage = global::PayrollApp.Properties.Resources.background2;
+            this.tabPage1.Controls.Add(this.button11);
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.statusText);
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.linkLabel3);
+            this.tabPage1.Controls.Add(this.linkLabel2);
+            this.tabPage1.Controls.Add(this.linkLabel1);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.PayrollButton);
+            this.tabPage1.Controls.Add(this.EmployeeButton);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(10);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(752, 501);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Welcome";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(350, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::PayrollApp.Properties.Resources._497184_200;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(65, 331);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 52);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::PayrollApp.Properties.Resources.img_452000;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 184);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 52);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // statusText
+            // 
+            this.statusText.BackColor = System.Drawing.Color.Transparent;
+            this.statusText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.statusText.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusText.ForeColor = System.Drawing.Color.Transparent;
+            this.statusText.Location = new System.Drawing.Point(554, 319);
+            this.statusText.Name = "statusText";
+            this.statusText.Size = new System.Drawing.Size(176, 102);
+            this.statusText.TabIndex = 15;
+            this.statusText.Text = "Found an Employees List";
+            this.statusText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.statusText.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.ForeColor = System.Drawing.Color.LightGray;
+            this.label33.Location = new System.Drawing.Point(16, 285);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(531, 26);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "_________________________________________________________________________________" +
+    "__";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(557, 238);
+            this.linkLabel3.Margin = new System.Windows.Forms.Padding(5);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(43, 15);
+            this.linkLabel3.TabIndex = 5;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Github";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(557, 212);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(5);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(56, 15);
+            this.linkLabel2.TabIndex = 4;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "About Us";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(196)))));
+            this.linkLabel1.Location = new System.Drawing.Point(557, 186);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(5);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 15);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Get Help";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(554, 120);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(176, 34);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Information";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(13, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(725, 23);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "BY DOGZ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(16, 474);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(722, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "This program is not OFFICIAL and should not be used in any form of business matte" +
+    "r\r\n\r\n";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(219, 360);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(263, 61);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Compute your crews salary on the go with payroll program";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(218, 331);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label7.Size = new System.Drawing.Size(283, 29);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Start calculating Your Crew Salary";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(218, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 61);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Get started by adding employee to your crew";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(217, 184);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label4.Size = new System.Drawing.Size(284, 29);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Add, Delete, Update Employee List";
+            // 
+            // PayrollButton
+            // 
+            this.PayrollButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PayrollButton.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayrollButton.Location = new System.Drawing.Point(31, 319);
+            this.PayrollButton.Margin = new System.Windows.Forms.Padding(100);
+            this.PayrollButton.Name = "PayrollButton";
+            this.PayrollButton.Size = new System.Drawing.Size(171, 102);
+            this.PayrollButton.TabIndex = 2;
+            this.PayrollButton.Text = "PAYROLL";
+            this.PayrollButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.PayrollButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.PayrollButton.UseVisualStyleBackColor = false;
+            this.PayrollButton.Click += new System.EventHandler(this.PayrollButton_Click);
+            // 
+            // EmployeeButton
+            // 
+            this.EmployeeButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.EmployeeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EmployeeButton.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeButton.Location = new System.Drawing.Point(31, 172);
+            this.EmployeeButton.Margin = new System.Windows.Forms.Padding(100);
+            this.EmployeeButton.Name = "EmployeeButton";
+            this.EmployeeButton.Size = new System.Drawing.Size(171, 102);
+            this.EmployeeButton.TabIndex = 2;
+            this.EmployeeButton.Text = "EMPLOYEE";
+            this.EmployeeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EmployeeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.EmployeeButton.UseVisualStyleBackColor = false;
+            this.EmployeeButton.Click += new System.EventHandler(this.EmployeeButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Get started, ";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(752, 121);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PAYROOOL";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -652,6 +918,39 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Payroll";
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label43.Location = new System.Drawing.Point(516, 260);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(177, 28);
+            this.label43.TabIndex = 28;
+            this.label43.Text = "you can\'t edit basic information and\r\ndeduction here";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label42.Location = new System.Drawing.Point(516, 243);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(207, 14);
+            this.label42.TabIndex = 27;
+            this.label42.Text = "click an employee to compute their salary.";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label41.Location = new System.Drawing.Point(516, 229);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 14);
+            this.label41.TabIndex = 26;
+            this.label41.Text = "Note:";
+            // 
             // RefreshPayroll
             // 
             this.RefreshPayroll.Location = new System.Drawing.Point(225, 9);
@@ -1042,6 +1341,7 @@
             this.label17.TabIndex = 18;
             this.label17.Text = "PAYROOOL - PAYROLL";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -1066,38 +1366,16 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Help";
             // 
-            // label41
+            // pictureBox4
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label41.Location = new System.Drawing.Point(516, 229);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 14);
-            this.label41.TabIndex = 26;
-            this.label41.Text = "Note:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label42.Location = new System.Drawing.Point(516, 243);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(207, 14);
-            this.label42.TabIndex = 27;
-            this.label42.Text = "click an employee to compute their salary.";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label43.Location = new System.Drawing.Point(516, 260);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(177, 28);
-            this.label43.TabIndex = 28;
-            this.label43.Text = "you can\'t edit basic information and\r\ndeduction here";
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 79);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(746, 101);
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
             // 
             // label34
             // 
@@ -1108,271 +1386,8 @@
             this.label34.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label34.Size = new System.Drawing.Size(752, 501);
             this.label34.TabIndex = 0;
-            this.label34.Text = "OH, I\'M SORRY DO YOU NEED ANYTHING.\r\nWE HAVE NOTHING HERE FOR YOU.\r\nSHU SHU";
+            this.label34.Text = "OH, I\'M SORRY, DO YOU NEED ANYTHING?\r\nWE HAVE NOTHING HERE FOR YOU.\r\nSHU SHU";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.BackgroundImage = global::PayrollApp.Properties.Resources.background2;
-            this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.statusText);
-            this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.linkLabel3);
-            this.tabPage1.Controls.Add(this.linkLabel2);
-            this.tabPage1.Controls.Add(this.linkLabel1);
-            this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.PayrollButton);
-            this.tabPage1.Controls.Add(this.EmployeeButton);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(10);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(752, 501);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Welcome";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(350, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::PayrollApp.Properties.Resources._497184_200;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(65, 331);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 52);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PayrollApp.Properties.Resources.img_452000;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 184);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 52);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // statusText
-            // 
-            this.statusText.BackColor = System.Drawing.Color.Transparent;
-            this.statusText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.statusText.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusText.ForeColor = System.Drawing.Color.Transparent;
-            this.statusText.Location = new System.Drawing.Point(554, 319);
-            this.statusText.Name = "statusText";
-            this.statusText.Size = new System.Drawing.Size(176, 102);
-            this.statusText.TabIndex = 15;
-            this.statusText.Text = "Found an Employees List";
-            this.statusText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.statusText.Visible = false;
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.ForeColor = System.Drawing.Color.LightGray;
-            this.label33.Location = new System.Drawing.Point(16, 285);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(531, 26);
-            this.label33.TabIndex = 14;
-            this.label33.Text = "_________________________________________________________________________________" +
-    "__";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.Location = new System.Drawing.Point(557, 238);
-            this.linkLabel3.Margin = new System.Windows.Forms.Padding(5);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(43, 15);
-            this.linkLabel3.TabIndex = 5;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Github";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(557, 212);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(5);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 15);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "About Us";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(196)))));
-            this.linkLabel1.Location = new System.Drawing.Point(557, 186);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(5);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 15);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Get Help";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(554, 120);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(176, 34);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "Information";
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(13, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(725, 23);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "BY DOGZ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(16, 474);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(722, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "This program is not OFFICIAL and should not be used in any form of business matte" +
-    "r\r\n\r\n";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(219, 360);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(263, 61);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Compute your crews salary on the go with payroll program";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(218, 331);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.label7.Size = new System.Drawing.Size(283, 29);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Start calculating Your Crew Salary";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(218, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(263, 61);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Get started by adding employee to your crew";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(217, 184);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.label4.Size = new System.Drawing.Size(284, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Add, Delete, Update Employee List";
-            // 
-            // PayrollButton
-            // 
-            this.PayrollButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PayrollButton.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayrollButton.Location = new System.Drawing.Point(31, 319);
-            this.PayrollButton.Margin = new System.Windows.Forms.Padding(100);
-            this.PayrollButton.Name = "PayrollButton";
-            this.PayrollButton.Size = new System.Drawing.Size(171, 102);
-            this.PayrollButton.TabIndex = 2;
-            this.PayrollButton.Text = "PAYROLL";
-            this.PayrollButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.PayrollButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.PayrollButton.UseVisualStyleBackColor = false;
-            this.PayrollButton.Click += new System.EventHandler(this.PayrollButton_Click);
-            // 
-            // EmployeeButton
-            // 
-            this.EmployeeButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.EmployeeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EmployeeButton.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeButton.Location = new System.Drawing.Point(31, 172);
-            this.EmployeeButton.Margin = new System.Windows.Forms.Padding(100);
-            this.EmployeeButton.Name = "EmployeeButton";
-            this.EmployeeButton.Size = new System.Drawing.Size(171, 102);
-            this.EmployeeButton.TabIndex = 2;
-            this.EmployeeButton.Text = "EMPLOYEE";
-            this.EmployeeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EmployeeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.EmployeeButton.UseVisualStyleBackColor = false;
-            this.EmployeeButton.Click += new System.EventHandler(this.EmployeeButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Get started, ";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(752, 121);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PAYROOOL";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage4
             // 
@@ -1392,6 +1407,17 @@
             this.tabPage4.Size = new System.Drawing.Size(752, 501);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "About";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(350, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox5.TabIndex = 19;
+            this.pictureBox5.TabStop = false;
             // 
             // groupBox13
             // 
@@ -1545,27 +1571,17 @@
             this.label21.Text = "PAYROOOL";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
+            // button11
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 79);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(746, 101);
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::PayrollApp.Properties.Resources.Logo;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(350, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button11.Location = new System.Drawing.Point(6, 466);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(63, 27);
+            this.button11.TabIndex = 19;
+            this.button11.Text = "Delete";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Form1
             // 
@@ -1581,6 +1597,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PAYROOOL";
             this.TabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1605,18 +1626,13 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1742,6 +1758,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button11;
     }
 }
 
